@@ -90,6 +90,12 @@
     <Compile Include="Assets\00 root\scripts\BotController.cs" />
     <Compile Include="Assets\00 root\scripts\DefString.cs" />
     <Compile Include="Assets\00 root\scripts\ETInput.cs" />
+    <Compile Include="Assets\00 root\scripts\Gui\Entity\Gui_Login.cs" />
+    <Compile Include="Assets\00 root\scripts\Gui\Entity\Gui_PlayUI.cs" />
+    <Compile Include="Assets\00 root\scripts\Gui\Entity\Gui_PopupMessage.cs" />
+    <Compile Include="Assets\00 root\scripts\Gui\Entity\Gui_dummy.cs" />
+    <Compile Include="Assets\00 root\scripts\Gui\GuiBase.cs" />
+    <Compile Include="Assets\00 root\scripts\Gui\GuiMgr.cs" />
     <Compile Include="Assets\00 root\scripts\Move_stop_option.cs" />
     <Compile Include="Assets\00 root\scripts\Player_controller.cs" />
     <Compile Include="Assets\00 root\scripts\edBot.cs" />
@@ -142,11 +148,6 @@
     <Compile Include="Assets\EasyTouch\Plugins\_C#-Event-Template\C_EasyJoystickTemplate.cs" />
     <Compile Include="Assets\EasyTouch\Plugins\_C#-Event-Template\C_EasyTouchTemplate.cs" />
     <Compile Include="Assets\GuiTemplateRoot\GuiTemplate\Scripts\BigNumber.cs" />
-    <Compile Include="Assets\GuiTemplateRoot\GuiTemplate\Scripts\Gui\Entity\Gui_Login.cs" />
-    <Compile Include="Assets\GuiTemplateRoot\GuiTemplate\Scripts\Gui\Entity\Gui_PopupMessage.cs" />
-    <Compile Include="Assets\GuiTemplateRoot\GuiTemplate\Scripts\Gui\Entity\Gui_dummy.cs" />
-    <Compile Include="Assets\GuiTemplateRoot\GuiTemplate\Scripts\Gui\GuiBase.cs" />
-    <Compile Include="Assets\GuiTemplateRoot\GuiTemplate\Scripts\Gui\GuiMgr.cs" />
     <Compile Include="Assets\GuiTemplateRoot\GuiTemplate\Scripts\test.cs" />
     <Compile Include="Assets\Little Dragons\Common\Scripts\Behaviors\AimBehavior.cs" />
     <Compile Include="Assets\Little Dragons\Common\Scripts\Behaviors\Deathbehavior.cs" />
@@ -1126,7 +1127,6 @@
     <Compile Include="Assets\Square City Architect\Standard Assets\Effects\ImageEffects\Scripts\VignetteAndChromaticAberration.cs" />
     <Compile Include="Assets\Square City Architect\Standard Assets\Effects\ImageEffects\Scripts\Vortex.cs" />
     <Compile Include="Assets\iTween\iTween.cs" />
-    <Compile Include="Assets\testdummy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\EasyTouch\Readme_first.txt" />
