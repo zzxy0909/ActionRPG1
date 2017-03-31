@@ -1,0 +1,412 @@
+fileFormatVersion: 2
+guid: 5c553b08d98242149a7f235378e2306c
+timeCreated: 1467493560
+licenseType: Store
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: qs-atlas
+    21300002: qs-atlas
+    21300004: qs-atlas
+    21300006: qs-atlas
+    21300008: qs-atlas
+    21300010: qs-atlas
+    21300012: qs-atlas
+    21300014: qs-atlas
+    21300016: qs-atlas
+    21300018: qs-atlas
+    21300020: qs-atlas
+    21300022: qs-atlas
+    21300024: qs-atlas
+    21300026: qs-atlas
+    21300028: qs-atlas
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 1
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: 5
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 5
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: qs-atlas
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 450
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 78, y: 90}
+        - {x: -70, y: 90}
+        - {x: -84, y: 81}
+        - {x: -84, y: -53}
+        - {x: -82, y: -66}
+        - {x: -40, y: -90}
+        - {x: -17, y: -114}
+        - {x: -14, y: -115}
+        - {x: 22, y: -115}
+        - {x: 64, y: -85}
+        - {x: 87, y: -18}
+        - {x: 87, y: 68}
+    - name: qs-atlas
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 0
+        width: 450
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 78, y: 90}
+        - {x: -70, y: 90}
+        - {x: -84, y: 81}
+        - {x: -84, y: -53}
+        - {x: -82, y: -66}
+        - {x: -40, y: -90}
+        - {x: -17, y: -114}
+        - {x: -14, y: -115}
+        - {x: 22, y: -115}
+        - {x: 64, y: -85}
+        - {x: 87, y: -18}
+        - {x: 87, y: 68}
+    - name: qs-atlas
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 0
+        width: 450
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 91, y: 44}
+        - {x: 82, y: 69}
+        - {x: 55, y: 94}
+        - {x: -55, y: 94}
+        - {x: -66, y: 93}
+        - {x: -88, y: 65}
+        - {x: -88, y: -24}
+        - {x: -85, y: -48}
+        - {x: -34, y: -115}
+        - {x: -14, y: -120}
+        - {x: 23, y: -120}
+        - {x: 71, y: -65}
+        - {x: 91, y: -13}
+    - name: qs-atlas
+      rect:
+        serializedVersion: 2
+        x: 1362
+        y: 0
+        width: 450
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 86, y: 82}
+        - {x: 66, y: 88}
+        - {x: -54, y: 88}
+        - {x: -83, y: 61}
+        - {x: -83, y: -26}
+        - {x: -71, y: -64}
+        - {x: -25, y: -110}
+        - {x: -14, y: -114}
+        - {x: 20, y: -114}
+        - {x: 61, y: -74}
+        - {x: 86, y: -27}
+    - name: qs-atlas
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 386
+        width: 450
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 78, y: 90}
+        - {x: -70, y: 90}
+        - {x: -84, y: 81}
+        - {x: -84, y: -53}
+        - {x: -82, y: -66}
+        - {x: -40, y: -90}
+        - {x: -17, y: -114}
+        - {x: -14, y: -115}
+        - {x: 22, y: -115}
+        - {x: 64, y: -85}
+        - {x: 87, y: -18}
+        - {x: 87, y: 68}
+    - name: qs-atlas
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 772
+        width: 450
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 86, y: 82}
+        - {x: 66, y: 88}
+        - {x: -54, y: 88}
+        - {x: -83, y: 61}
+        - {x: -83, y: -26}
+        - {x: -71, y: -64}
+        - {x: -25, y: -110}
+        - {x: -14, y: -114}
+        - {x: 20, y: -114}
+        - {x: 61, y: -74}
+        - {x: 86, y: -27}
+    - name: qs-atlas
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1158
+        width: 450
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 86, y: 82}
+        - {x: 66, y: 88}
+        - {x: -54, y: 88}
+        - {x: -83, y: 61}
+        - {x: -83, y: -26}
+        - {x: -71, y: -64}
+        - {x: -25, y: -110}
+        - {x: -14, y: -114}
+        - {x: 20, y: -114}
+        - {x: 61, y: -74}
+        - {x: 86, y: -27}
+    - name: qs-atlas
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1544
+        width: 450
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 86, y: 82}
+        - {x: 66, y: 88}
+        - {x: -54, y: 88}
+        - {x: -83, y: 61}
+        - {x: -83, y: -26}
+        - {x: -71, y: -64}
+        - {x: -25, y: -110}
+        - {x: -14, y: -114}
+        - {x: 20, y: -114}
+        - {x: 61, y: -74}
+        - {x: 86, y: -27}
+    - name: qs-atlas
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 386
+        width: 450
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 86, y: 82}
+        - {x: 66, y: 88}
+        - {x: -54, y: 88}
+        - {x: -83, y: 61}
+        - {x: -83, y: -26}
+        - {x: -71, y: -64}
+        - {x: -25, y: -110}
+        - {x: -14, y: -114}
+        - {x: 20, y: -114}
+        - {x: 61, y: -74}
+        - {x: 86, y: -27}
+    - name: qs-atlas
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 386
+        width: 450
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 78, y: 90}
+        - {x: -70, y: 90}
+        - {x: -84, y: 81}
+        - {x: -84, y: -53}
+        - {x: -82, y: -66}
+        - {x: -40, y: -90}
+        - {x: -17, y: -114}
+        - {x: -14, y: -115}
+        - {x: 22, y: -115}
+        - {x: 64, y: -85}
+        - {x: 87, y: -18}
+        - {x: 87, y: 68}
+    - name: qs-atlas
+      rect:
+        serializedVersion: 2
+        x: 1362
+        y: 386
+        width: 450
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 86, y: 82}
+        - {x: 66, y: 88}
+        - {x: -54, y: 88}
+        - {x: -83, y: 61}
+        - {x: -83, y: -26}
+        - {x: -71, y: -64}
+        - {x: -25, y: -110}
+        - {x: -14, y: -114}
+        - {x: 20, y: -114}
+        - {x: 61, y: -74}
+        - {x: 86, y: -27}
+    - name: qs-atlas
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 772
+        width: 450
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 86, y: 82}
+        - {x: 66, y: 88}
+        - {x: -54, y: 88}
+        - {x: -83, y: 61}
+        - {x: -83, y: -26}
+        - {x: -71, y: -64}
+        - {x: -25, y: -110}
+        - {x: -14, y: -114}
+        - {x: 20, y: -114}
+        - {x: 61, y: -74}
+        - {x: 86, y: -27}
+    - name: qs-atlas
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 1158
+        width: 450
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 91, y: 44}
+        - {x: 82, y: 69}
+        - {x: 55, y: 94}
+        - {x: -55, y: 94}
+        - {x: -66, y: 93}
+        - {x: -88, y: 65}
+        - {x: -88, y: -24}
+        - {x: -85, y: -48}
+        - {x: -34, y: -115}
+        - {x: -14, y: -120}
+        - {x: 23, y: -120}
+        - {x: 71, y: -65}
+        - {x: 91, y: -13}
+    - name: qs-atlas
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 1544
+        width: 450
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 78, y: 90}
+        - {x: -70, y: 90}
+        - {x: -84, y: 81}
+        - {x: -84, y: -53}
+        - {x: -82, y: -66}
+        - {x: -40, y: -90}
+        - {x: -17, y: -114}
+        - {x: -14, y: -115}
+        - {x: 22, y: -115}
+        - {x: 64, y: -85}
+        - {x: 87, y: -18}
+        - {x: 87, y: 68}
+    - name: qs-atlas
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 772
+        width: 450
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 78, y: 90}
+        - {x: -70, y: 90}
+        - {x: -84, y: 81}
+        - {x: -84, y: -53}
+        - {x: -82, y: -66}
+        - {x: -40, y: -90}
+        - {x: -17, y: -114}
+        - {x: -14, y: -115}
+        - {x: 22, y: -115}
+        - {x: 64, y: -85}
+        - {x: 87, y: -18}
+        - {x: 87, y: 68}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

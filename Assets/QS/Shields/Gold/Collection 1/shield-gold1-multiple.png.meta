@@ -1,0 +1,253 @@
+fileFormatVersion: 2
+guid: c588ddf7e51ac53469a12c18f8e8732c
+timeCreated: 1472261747
+licenseType: Store
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: shield-gold1-multiple_0
+    21300002: shield-gold1-multiple_1
+    21300004: shield-gold1-multiple_2
+    21300006: shield-gold1-multiple_3
+    21300008: shield-gold1-multiple_4
+    21300010: shield-gold1-multiple_5
+    21300012: shield-gold1-multiple_6
+    21300014: shield-gold1-multiple_7
+    21300016: shield-gold1-multiple_8
+    21300018: shield-gold1-multiple_9
+    21300020: shield-gold1-multiple_10
+    21300022: shield-gold1-multiple_11
+    21300024: shield-gold1-multiple_12
+    21300026: shield-gold1-multiple_13
+    21300028: shield-gold1-multiple_14
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: shield-gold1-multiple_0
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1554
+        width: 459
+        height: 458
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: shield-gold1-multiple_1
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 1554
+        width: 459
+        height: 458
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: shield-gold1-multiple_2
+      rect:
+        serializedVersion: 2
+        x: 1272
+        y: 1554
+        width: 459
+        height: 458
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: shield-gold1-multiple_3
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1044
+        width: 459
+        height: 458
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: shield-gold1-multiple_4
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 1044
+        width: 459
+        height: 458
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: shield-gold1-multiple_5
+      rect:
+        serializedVersion: 2
+        x: 1272
+        y: 1044
+        width: 459
+        height: 458
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: shield-gold1-multiple_6
+      rect:
+        serializedVersion: 2
+        x: 1872
+        y: 1044
+        width: 459
+        height: 458
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: shield-gold1-multiple_7
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 534
+        width: 458
+        height: 459
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: shield-gold1-multiple_8
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 534
+        width: 458
+        height: 459
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: shield-gold1-multiple_9
+      rect:
+        serializedVersion: 2
+        x: 1273
+        y: 534
+        width: 458
+        height: 459
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: shield-gold1-multiple_10
+      rect:
+        serializedVersion: 2
+        x: 1873
+        y: 534
+        width: 458
+        height: 459
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: shield-gold1-multiple_11
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 23
+        width: 458
+        height: 459
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: shield-gold1-multiple_12
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 23
+        width: 458
+        height: 459
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: shield-gold1-multiple_13
+      rect:
+        serializedVersion: 2
+        x: 1273
+        y: 23
+        width: 458
+        height: 459
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: shield-gold1-multiple_14
+      rect:
+        serializedVersion: 2
+        x: 1873
+        y: 23
+        width: 458
+        height: 459
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
