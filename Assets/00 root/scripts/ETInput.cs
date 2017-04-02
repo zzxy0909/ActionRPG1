@@ -54,6 +54,7 @@ public class ETInput : MonoBehaviour {
 
         // Vector3 resultPos = transform.forward * move.joystickValue.magnitude * 0.1f; // Time.deltaTime;
         m_agent.SetDestination(resultPos);
+        m_agent.Resume();
         m_PlayerController.m_BotController.SetRun();
     }
 	void On_JoystickMove( MovingJoystick move){
@@ -71,7 +72,7 @@ public class ETInput : MonoBehaviour {
 	}
     void StopProc()
     {
-
+        m_agent.Stop();
         m_PlayerController.m_BotController.SetIdle();
     }
 	void On_JoystickMoveEnd (MovingJoystick move)
