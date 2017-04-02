@@ -80,7 +80,10 @@ public class GuiMgr : MonoBehaviour
 
         if (_showGuiEntityList.TryGetValue(typeof(T).ToString(), out guiBase))
         {
-            return guiBase as T;
+            if(guiBase != null)
+            {
+                return guiBase as T;
+            }               
         }
 
         return null;
@@ -89,7 +92,7 @@ public class GuiMgr : MonoBehaviour
     public T Show<T>(ELayerType pLayer, bool pShow, JSONNode pParams) where T : GuiBase
     {
         string guiTypeName = typeof(T).ToString();
-
+    
         if (pShow)
         {
             GuiBase guiBase;
@@ -229,7 +232,6 @@ public class GuiMgr : MonoBehaviour
         _TransFront = _instance.GetFrontCamera().transform;
         _TransCache = _instance.transform.Find(strCachePath);
         _BackUICamera = _TransBack.GetComponent<UICamera>();
-        InvokeRepeating("RefreshPoolQueue", 0.0f, 1.0f);
 
     }
 
@@ -281,53 +283,6 @@ public class GuiMgr : MonoBehaviour
         StopAllCoroutines();
 
         _instance = null;
-    }
-
-
-    protected void RefreshPoolQueue()
-    {
-        if (0 == _guiEntityPools.Count)
-        {
-            return;
-        }
-
-        int delCount = _guiEntityPools.Count - _limitOfPools;
-
-        if (delCount <= 0)
-        {
-            return;
-        }
-
-        List<GuiBase> removeList = null;
-
-        foreach ( GuiBase guiBase in _guiEntityPools )
-        {
-            if (delCount > 0)
-            {
-                delCount--;
-
-                if (null == removeList)
-                {
-                    removeList = new List<GuiBase>();
-                }
-
-                removeList.Add(guiBase);
-            }
-            else
-            {
-                break;
-            }
-        }
-
-        if (null != removeList)
-        {
-            foreach (GuiBase guiBase in removeList)
-            {
-                _guiEntityPools.Remove(guiBase);
-
-                GameObject.DestroyImmediate(guiBase.gameObject);
-            }
-        }
     }
 
 }

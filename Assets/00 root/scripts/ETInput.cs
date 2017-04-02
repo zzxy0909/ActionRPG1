@@ -4,7 +4,6 @@ using UnityEngine.AI;
 
 public class ETInput : MonoBehaviour {
     
-    public Move_stop_option m_Move_stop_option = new Move_stop_option();
     public NavMeshAgent m_agent;
     public Player_controller m_PlayerController;
 
@@ -59,9 +58,15 @@ public class ETInput : MonoBehaviour {
     }
 	void On_JoystickMove( MovingJoystick move){
 	
-        if(m_Move_stop_option.checkStopCase() == false)
+        if(m_PlayerController.m_BotController.m_Move_stop_option.checkStopCase() == false)
         {
             MoveProc(move);
+        }else if(m_PlayerController.m_BotController.m_Move_stop_option.m_isPlaySkillorAttack == true
+            && m_PlayerController.m_BotController.m_Move_stop_option.m_isPlayAvoid == false
+            )
+        {
+            float angle = move.Axis2Angle(true);
+            transform.rotation = Quaternion.Euler(new Vector3(0, angle, 0));
         }
 	}
     void StopProc()
@@ -73,7 +78,7 @@ public class ETInput : MonoBehaviour {
 	{
         m_PlayerController.m_BotController.SetRun_end(); // 우선 이동 상태는 종료
 
-        if (m_Move_stop_option.checkStopCase() == false) // skill 시전 중 혹은 회피 중 등등 이 아닐때
+        if (m_PlayerController.m_BotController.m_Move_stop_option.checkStopCase() == false) // skill 시전 중 혹은 회피 중 등등 이 아닐때
         {
             StopProc();
         }

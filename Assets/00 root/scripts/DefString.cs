@@ -7,5 +7,7 @@ public class DefString {
     public const string Ani_idle = "idle";
     public const string Ani_avoid = "avoid";
     public const string Ani_run = "run";
+    public const string Ani_attack = "attack";
+    public const string Ani_attack_start = "attack_start";
 
 }
