@@ -87,6 +87,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\00 root\scripts\AiFriend_controller.cs" />
     <Compile Include="Assets\00 root\scripts\BotController.cs" />
     <Compile Include="Assets\00 root\scripts\DefString.cs" />
     <Compile Include="Assets\00 root\scripts\ETInput.cs" />

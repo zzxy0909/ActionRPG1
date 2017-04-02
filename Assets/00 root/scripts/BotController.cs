@@ -31,11 +31,11 @@ public class BotController : MonoBehaviour {
     public void SetIdle()
     {
         // 각 속성이 0 이면 idle
-        if( m_Animator.GetInteger(DefString.Ani_run) == 0 
-           && m_Animator.GetInteger(DefString.Ani_avoid) == 0
+        if( m_Animator.GetInteger(DefineID.Ani_run) == 0 
+           && m_Animator.GetInteger(DefineID.Ani_avoid) == 0
                 )
         {
-            m_Animator.SetTrigger(DefString.Ani_idle);
+            m_Animator.SetTrigger(DefineID.Ani_idle);
            
         }
         
@@ -51,34 +51,34 @@ public class BotController : MonoBehaviour {
             Gui_PlayUI comp = GuiMgr.Instance.Find<Gui_PlayUI>();
             if (comp != null && comp.m_isDownAttackSkill == true)
             {
-                m_Animator.SetTrigger(DefString.Ani_attack_start);
+                m_Animator.SetTrigger(DefineID.Ani_attack_start);
                 return;
             }
         }
         m_Move_stop_option.m_isPlaySkillorAttack = false;
-        m_Animator.SetInteger(DefString.Ani_attack, 0);
+        m_Animator.SetInteger(DefineID.Ani_attack, 0);
     }
 
     public void SetRun()
     {
-        m_Animator.SetInteger(DefString.Ani_run, 1);
+        m_Animator.SetInteger(DefineID.Ani_run, 1);
     }
     public void SetRun_end()
     {
-        m_Animator.SetInteger(DefString.Ani_run, 0);
+        m_Animator.SetInteger(DefineID.Ani_run, 0);
     }
     public void SetAvoid()
     {
-        m_Animator.SetInteger(DefString.Ani_avoid, 1);
+        m_Animator.SetInteger(DefineID.Ani_avoid, 1);
     }
     public void SetAvoid_end()
     {
-        m_Animator.SetInteger(DefString.Ani_avoid, 0);
+        m_Animator.SetInteger(DefineID.Ani_avoid, 0);
     }
     public void SetAttack(int n)
     {
         m_Move_stop_option.m_isPlaySkillorAttack = true;
-        m_Animator.SetTrigger(DefString.Ani_attack_start);
-        m_Animator.SetInteger(DefString.Ani_attack, n);
+        m_Animator.SetTrigger(DefineID.Ani_attack_start);
+        m_Animator.SetInteger(DefineID.Ani_attack, n);
     }
 }
