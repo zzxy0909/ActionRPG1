@@ -16,7 +16,7 @@ public class Player_controller : MonoBehaviour {
     {
         if(_instance == null)
         {
-            _instance = GameObject.FindObjectOfType<Player_controller>();
+            _instance = this; // GameObject.FindObjectOfType<Player_controller>();
         }else
         {
             GameObject.Destroy(this.gameObject);

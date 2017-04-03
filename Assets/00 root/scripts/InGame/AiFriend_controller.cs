@@ -4,14 +4,14 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class AiFriend_controller : MonoBehaviour {
-    public enum AIStatef { Moving = 0, Attack = 1, Escape = 2, Idle = 3, FollowMaster = 4 };
-    public AIStatef m_currentState = AIStatef.Idle;
-    public AIStatef m_lastState = AIStatef.Idle;
+    public enum AiFriendState { Moving = 0, Attack = 1, Escape = 2, Idle = 3, Follow = 4 };
+    public AiFriendState m_currentState = AiFriendState.Idle;
+    public AiFriendState m_lastState = AiFriendState.Idle;
     public Transform m_MasterTransform;
     public BotController m_BotController;
     public Transform m_AttackTarget;
-    public float m_ApproachDistance = 3.0f;
-    public float m_DetectRange = 15;
+    public float m_ApproachDistance = 3.0f;  // 마스터 접근후 idle
+    public float m_DetectRange = 15; // 적군 인식 범위
 
     public NavMeshAgent m_NavMeshAgent;
 
@@ -38,17 +38,17 @@ public class AiFriend_controller : MonoBehaviour {
             m_NavMeshAgent = GetComponent<NavMeshAgent>();
         }
 
-        SetState(AIStatef.FollowMaster);
+        SetState(AiFriendState.Follow);
     }
 	// Use this for initialization
 	void Start () {
         StartCoroutine(Startup());
 	}
-    void SetState(AIStatef st)
+    void SetState(AiFriendState st)
     {
         m_currentState = st;
     }
-    void SetLastState(AIStatef st)
+    void SetLastState(AiFriendState st)
     {
         m_lastState = st;
     }
@@ -59,28 +59,52 @@ public class AiFriend_controller : MonoBehaviour {
         m_NavMeshAgent.Resume();
         m_BotController.SetRun();
 
-        SetLastState(AIStatef.FollowMaster);
+        SetLastState(AiFriendState.Follow);
     }
+    void Stop_Move()
+    {
+        m_NavMeshAgent.Stop();
+        if (m_lastState != AiFriendState.Idle)
+        {
+            m_BotController.SetRun_end();
+            m_BotController.SetIdle();
+            SetLastState(AiFriendState.Idle);
+        }
+    }
+
+    void PlayAttack()
+    {
+        if (isInDetectRange())
+        {
+
+        }
+    }
+
+    public void FindAttackTarget_option()
+    {
+        m_checkEnemy = AiManager.Instance.Get_NearAiEnemy(m_thisTransform.position);
+        if (m_checkEnemy != null)
+            m_AttackTarget = m_checkEnemy.transform;
+    }
+
+    public AiEnemy_controller m_checkEnemy;
     void Play_idle()
     {
         if (isInApproachDistance())
         {
-            m_NavMeshAgent.Stop();
-            m_BotController.SetRun_end();
-            m_BotController.SetIdle();
-            SetLastState(AIStatef.Idle);
-        }else if(isInDetectRange() )
+            Stop_Move();
+        }
+        else if(isInDetectRange() )
         {
             // attack skill Range 를 검사 하여 해당 거리에 공격 시도 후 다시 idle
 
             // idle
-            m_BotController.SetRun_end();
-            m_BotController.SetIdle();
-            SetLastState(AIStatef.Idle);
+            Stop_Move();
         }
         else // ApproachDistance 밖에서 적을 찾지 못 했으면 FollowMaster
         {
-            SetState(AIStatef.FollowMaster);
+            FindAttackTarget_option();
+            SetState(AiFriendState.Follow);
         }
     }
     bool isInApproachDistance()
@@ -100,10 +124,10 @@ public class AiFriend_controller : MonoBehaviour {
     {
         switch(m_currentState)
         {
-            case AIStatef.FollowMaster:
+            case AiFriendState.Follow:
                 if(isInApproachDistance() )
                 {
-                    SetState(AIStatef.Idle);
+                    SetState(AiFriendState.Idle);
                     Play_idle();
                 }
                 else 
@@ -111,7 +135,7 @@ public class AiFriend_controller : MonoBehaviour {
                     FollowMaster();
                 }
                 break;
-            case AIStatef.Idle:
+            case AiFriendState.Idle:
                 Play_idle();
                 break;
         }
