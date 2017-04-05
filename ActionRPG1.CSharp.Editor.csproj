@@ -150,6 +150,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\00 root\scripts\Editor\edBot.cs" />
+    <Compile Include="Assets\00 root\scripts\Editor\edPlayer.cs" />
     <Compile Include="Assets\EasyTouch\Plugins\Editor\GUIEasyButtonCallBack.cs" />
     <Compile Include="Assets\EasyTouch\Plugins\Editor\GUIEasyButtonInspector.cs" />
     <Compile Include="Assets\EasyTouch\Plugins\Editor\GUIEasyJoystickCallBack.cs" />
@@ -349,8 +351,21 @@
     <Compile Include="Assets\iTween\PlayMaker\Editor\iTweenMoveToActionEditor.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Cute_Knight\README.txt" />
+    <None Include="Assets\Cute_Knight\Shader\Unitychan_chara_akarami_blend.shader" />
+    <None Include="Assets\Cute_Knight\Shader\Unitychan_chara_eye.shader" />
+    <None Include="Assets\Cute_Knight\Shader\Unitychan_chara_eye_blend.shader" />
+    <None Include="Assets\Cute_Knight\Shader\Unitychan_chara_eyelash_blend.shader" />
+    <None Include="Assets\Cute_Knight\Shader\Unitychan_chara_fuku.shader" />
+    <None Include="Assets\Cute_Knight\Shader\Unitychan_chara_fuku_ds.shader" />
+    <None Include="Assets\Cute_Knight\Shader\Unitychan_chara_hada.shader" />
+    <None Include="Assets\Cute_Knight\Shader\Unitychan_chara_hada_blend.shader" />
+    <None Include="Assets\Cute_Knight\Shader\Unitychan_chara_hair.shader" />
+    <None Include="Assets\Cute_Knight\Shader\Unitychan_chara_hair_ds.shader" />
+    <None Include="Assets\Cute_Knight\scene\AlphaMask.shader" />
     <None Include="Assets\EasyTouch\Readme_first.txt" />
     <None Include="Assets\Haruko\ReadMe.txt" />
+    <None Include="Assets\IGSoft_Resources\Projects\RefResources\Effect_Res\Shader\Eff_MultiplyDouble.shader" />
     <None Include="Assets\Malbers Animations\Common\Materials\Color16.shader" />
     <None Include="Assets\Malbers Animations\Common\Materials\Color8.shader" />
     <None Include="Assets\Malbers Animations\Common\Scripts\Utility\Compatible SA\Water\Shaders\FXWaterPro.shader" />

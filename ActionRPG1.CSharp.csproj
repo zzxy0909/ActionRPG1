@@ -87,10 +87,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\00 root\scripts\AiFriend_controller.cs" />
-    <Compile Include="Assets\00 root\scripts\BotController.cs" />
-    <Compile Include="Assets\00 root\scripts\DefString.cs" />
-    <Compile Include="Assets\00 root\scripts\ETInput.cs" />
+    <Compile Include="Assets\00 root\scripts\Data\SkillInfo.cs" />
+    <Compile Include="Assets\00 root\scripts\Data\StatusNbuff.cs" />
+    <Compile Include="Assets\00 root\scripts\DefineID.cs" />
     <Compile Include="Assets\00 root\scripts\Gui\Entity\Gui_Login.cs" />
     <Compile Include="Assets\00 root\scripts\Gui\Entity\Gui_PlayUI.cs" />
     <Compile Include="Assets\00 root\scripts\Gui\Entity\Gui_PopupMessage.cs" />
@@ -98,10 +97,17 @@
     <Compile Include="Assets\00 root\scripts\Gui\GuiBase.cs" />
     <Compile Include="Assets\00 root\scripts\Gui\GuiMgr.cs" />
     <Compile Include="Assets\00 root\scripts\Gui\GuiStartObject.cs" />
-    <Compile Include="Assets\00 root\scripts\Move_stop_option.cs" />
-    <Compile Include="Assets\00 root\scripts\Player_controller.cs" />
-    <Compile Include="Assets\00 root\scripts\edBot.cs" />
-    <Compile Include="Assets\00 root\scripts\edPlayer.cs" />
+    <Compile Include="Assets\00 root\scripts\InGame\AiEnemy_controller.cs" />
+    <Compile Include="Assets\00 root\scripts\InGame\AiFriend_controller.cs" />
+    <Compile Include="Assets\00 root\scripts\InGame\AiManager.cs" />
+    <Compile Include="Assets\00 root\scripts\InGame\BotController.cs" />
+    <Compile Include="Assets\00 root\scripts\InGame\ETInput.cs" />
+    <Compile Include="Assets\00 root\scripts\InGame\FindAttackTarget_option.cs" />
+    <Compile Include="Assets\00 root\scripts\InGame\Move_stop_option.cs" />
+    <Compile Include="Assets\00 root\scripts\InGame\Player_controller.cs" />
+    <Compile Include="Assets\00 root\scripts\InGame\Skill_controller.cs" />
+    <Compile Include="Assets\00 root\scripts\util\SetChildMainCamera.cs" />
+    <Compile Include="Assets\00 root\scripts\util\SmoothFollowObj.cs" />
     <Compile Include="Assets\EasyTouch\Example\C# Example\Example for EasyButton\Bullet.cs" />
     <Compile Include="Assets\EasyTouch\Example\C# Example\Example for EasyButton\ETPlayer.cs" />
     <Compile Include="Assets\EasyTouch\Example\C# Example\Example for EasyButton\ManualControl.cs" />
@@ -1131,8 +1137,21 @@
     <Compile Include="Assets\iTween\iTween.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Cute_Knight\README.txt" />
+    <None Include="Assets\Cute_Knight\Shader\Unitychan_chara_akarami_blend.shader" />
+    <None Include="Assets\Cute_Knight\Shader\Unitychan_chara_eye.shader" />
+    <None Include="Assets\Cute_Knight\Shader\Unitychan_chara_eye_blend.shader" />
+    <None Include="Assets\Cute_Knight\Shader\Unitychan_chara_eyelash_blend.shader" />
+    <None Include="Assets\Cute_Knight\Shader\Unitychan_chara_fuku.shader" />
+    <None Include="Assets\Cute_Knight\Shader\Unitychan_chara_fuku_ds.shader" />
+    <None Include="Assets\Cute_Knight\Shader\Unitychan_chara_hada.shader" />
+    <None Include="Assets\Cute_Knight\Shader\Unitychan_chara_hada_blend.shader" />
+    <None Include="Assets\Cute_Knight\Shader\Unitychan_chara_hair.shader" />
+    <None Include="Assets\Cute_Knight\Shader\Unitychan_chara_hair_ds.shader" />
+    <None Include="Assets\Cute_Knight\scene\AlphaMask.shader" />
     <None Include="Assets\EasyTouch\Readme_first.txt" />
     <None Include="Assets\Haruko\ReadMe.txt" />
+    <None Include="Assets\IGSoft_Resources\Projects\RefResources\Effect_Res\Shader\Eff_MultiplyDouble.shader" />
     <None Include="Assets\Malbers Animations\Common\Materials\Color16.shader" />
     <None Include="Assets\Malbers Animations\Common\Materials\Color8.shader" />
     <None Include="Assets\Malbers Animations\Common\Scripts\Utility\Compatible SA\Water\Shaders\FXWaterPro.shader" />
