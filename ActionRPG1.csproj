@@ -88,6 +88,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\00 root\scripts\Data\SkillInfo.cs" />
+    <Compile Include="Assets\00 root\scripts\Data\StatusNbuff.cs" />
     <Compile Include="Assets\00 root\scripts\DefineID.cs" />
     <Compile Include="Assets\00 root\scripts\Gui\Entity\Gui_Login.cs" />
     <Compile Include="Assets\00 root\scripts\Gui\Entity\Gui_PlayUI.cs" />
@@ -105,6 +106,8 @@
     <Compile Include="Assets\00 root\scripts\InGame\Move_stop_option.cs" />
     <Compile Include="Assets\00 root\scripts\InGame\Player_controller.cs" />
     <Compile Include="Assets\00 root\scripts\InGame\Skill_controller.cs" />
+    <Compile Include="Assets\00 root\scripts\util\SetChildMainCamera.cs" />
+    <Compile Include="Assets\00 root\scripts\util\SmoothFollowObj.cs" />
     <Compile Include="Assets\EasyTouch\Example\C# Example\Example for EasyButton\Bullet.cs" />
     <Compile Include="Assets\EasyTouch\Example\C# Example\Example for EasyButton\ETPlayer.cs" />
     <Compile Include="Assets\EasyTouch\Example\C# Example\Example for EasyButton\ManualControl.cs" />
@@ -1136,6 +1139,7 @@
   <ItemGroup>
     <None Include="Assets\EasyTouch\Readme_first.txt" />
     <None Include="Assets\Haruko\ReadMe.txt" />
+    <None Include="Assets\IGSoft_Resources\Projects\RefResources\Effect_Res\Shader\Eff_MultiplyDouble.shader" />
     <None Include="Assets\Malbers Animations\Common\Materials\Color16.shader" />
     <None Include="Assets\Malbers Animations\Common\Materials\Color8.shader" />
     <None Include="Assets\Malbers Animations\Common\Scripts\Utility\Compatible SA\Water\Shaders\FXWaterPro.shader" />

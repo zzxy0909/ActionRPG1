@@ -353,6 +353,7 @@
   <ItemGroup>
     <None Include="Assets\EasyTouch\Readme_first.txt" />
     <None Include="Assets\Haruko\ReadMe.txt" />
+    <None Include="Assets\IGSoft_Resources\Projects\RefResources\Effect_Res\Shader\Eff_MultiplyDouble.shader" />
     <None Include="Assets\Malbers Animations\Common\Materials\Color16.shader" />
     <None Include="Assets\Malbers Animations\Common\Materials\Color8.shader" />
     <None Include="Assets\Malbers Animations\Common\Scripts\Utility\Compatible SA\Water\Shaders\FXWaterPro.shader" />
