@@ -17,36 +17,6 @@ public class Gui_Login : GuiBase
         //EventDelegate.Add(Get_usedTrans(_btnLogin).GetComponent<UIButton>().onClick, LoginClick);
     }
     
-	public override void OnCreate()
-	{		
-        //_usedTransList.Clear();
-		
-        //_usedTransList["Login Button"] = null;				
-        //FindTrans();
-
-//        EventDelegate.Add(_usedTransList["Login Button"].GetComponent<UIButton>().onClick, LoginClick );
-
-//        _usedTransList["Login Button"].GetComponent<UIButton>().onClick.Add( () => { LoginClick(); };
-
-	}
-
-	
-	public override void OnEnter()
-	{
-		//_usedTransList["Login Button"].gameObject.SetActive(false);
-	}
-
-
-	public override void OnLeave()
-	{
-	}
-
-
-	public override void OnDelete()
-	{
-//		_usedTransList.Clear();
-	}
-
     /// <summary>
     /// "로그인" 버튼 클릭시 호출...
     /// </summary>

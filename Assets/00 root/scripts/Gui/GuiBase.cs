@@ -8,10 +8,6 @@ using SimpleJSON;
 #endif
 public class GuiBase : MonoBehaviour
 {
-
-    protected bool								_isStarted = false;
-    protected bool								_isFinished = false;
-
     protected JSONNode							_params = null;
 
 //    public Dictionary<string, Transform> _usedTransList = new Dictionary<string, Transform>();
@@ -52,50 +48,14 @@ public class GuiBase : MonoBehaviour
         }
         return null;
     }
-
-//=====================================================
-	public void IsRender(bool pIsRender)
-	{
-		gameObject.SetActive(pIsRender);
-	}
-
-    protected void Awake()
+    //=====================================================
+    public virtual void SetInspactor_InitTransList()
     {
-        OnCreate();
+
     }
-
-    protected void Start()
+    public virtual void SetParameter(JSONNode p)
     {
-        _isStarted = true;
-        _isFinished = false;
-
-        OnEnter();
-    }
-
-    protected void OnEnable()
-    {
-#if UNITY_EDITOR
-        OnEnable_Editor();
-#endif
-
-        if (_isStarted)
-        {
-            _isFinished = false;
-
-            OnEnter();
-        }
-    }
-
-    protected void OnDisable()
-    {
-        OnLeave();
-
-        _params = null;
-    }
-
-    protected void OnDestroy()
-    {
-        OnDelete();
+        _params = p;
     }
 
     // FindTrans 는 SetInspactor_usedTransList 로 설정 하여 초기화시 부하를 없게 한다.
@@ -119,49 +79,5 @@ public class GuiBase : MonoBehaviour
     //    }
     //}
 
-
-    public bool IsFinished
-    {
-        get
-        {
-            return _isFinished;
-        }
-    }
-
-    public void Finish()
-    {
-        _isFinished = true;
-    }
-
-    public void SetParameter(JSONNode pParams)
-    {
-        _params = pParams;
-    }
-
-    public virtual void SetInspactor_InitTransList()
-    {
-
-    }
-
-    public virtual void OnCreate()
-    {
-    }
-
-    public virtual void OnEnter()
-    {
-    }
-
-    public virtual void OnFinish()
-    {
-        Finish();
-    }
-
-    public virtual void OnLeave()
-    {
-    }
-
-    public virtual void OnDelete()
-    {
-    }
 
 }

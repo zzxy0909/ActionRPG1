@@ -351,6 +351,18 @@
     <Compile Include="Assets\iTween\PlayMaker\Editor\iTweenMoveToActionEditor.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Cute_Knight\README.txt" />
+    <None Include="Assets\Cute_Knight\Shader\Unitychan_chara_akarami_blend.shader" />
+    <None Include="Assets\Cute_Knight\Shader\Unitychan_chara_eye.shader" />
+    <None Include="Assets\Cute_Knight\Shader\Unitychan_chara_eye_blend.shader" />
+    <None Include="Assets\Cute_Knight\Shader\Unitychan_chara_eyelash_blend.shader" />
+    <None Include="Assets\Cute_Knight\Shader\Unitychan_chara_fuku.shader" />
+    <None Include="Assets\Cute_Knight\Shader\Unitychan_chara_fuku_ds.shader" />
+    <None Include="Assets\Cute_Knight\Shader\Unitychan_chara_hada.shader" />
+    <None Include="Assets\Cute_Knight\Shader\Unitychan_chara_hada_blend.shader" />
+    <None Include="Assets\Cute_Knight\Shader\Unitychan_chara_hair.shader" />
+    <None Include="Assets\Cute_Knight\Shader\Unitychan_chara_hair_ds.shader" />
+    <None Include="Assets\Cute_Knight\scene\AlphaMask.shader" />
     <None Include="Assets\EasyTouch\Readme_first.txt" />
     <None Include="Assets\Haruko\ReadMe.txt" />
     <None Include="Assets\IGSoft_Resources\Projects\RefResources\Effect_Res\Shader\Eff_MultiplyDouble.shader" />

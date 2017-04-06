@@ -2,16 +2,41 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum eBot_type
+{
+    player,
+    enemy,
+    boss,
+}
+
 public class BotController : MonoBehaviour {
     
     public Animator m_Animator;
     public Move_stop_option m_Move_stop_option = new Move_stop_option();
 
-    public bool m_isPlayer = false;  // BotType 에서 player, Enemy 등 으로 구분 할 수도 있음.
+    public eBot_type m_Bot_type = eBot_type.enemy;  // BotType 에서 player, Enemy 등 으로 구분 할 수도 있음.
+    public UI_BotUI m_BotUI;
+    public Transform m_posHPbar;
 
-    public void SetPlayer()
+    Gui_BotUIManager m_Gui_BotUIManager;
+    public IEnumerator SetPlayer()
     {
-        m_isPlayer = true;
+        m_Bot_type = eBot_type.player;
+
+        while (m_Gui_BotUIManager == null)
+        {
+            m_Gui_BotUIManager = GuiMgr.Instance.Find<Gui_BotUIManager>();
+            yield return new WaitForEndOfFrame();
+        }
+
+        // BotUI 설정.
+        GameObject guitmp = m_Gui_BotUIManager.Add_BotUI(eBot_type.player);
+        if(guitmp != null)
+        {
+            m_BotUI = guitmp.GetComponent<UI_BotUI>();
+            m_BotUI.Set_UI_Info(m_posHPbar);
+        }
+
     }
     // Use this for initialization
     void Start () {
@@ -19,9 +44,9 @@ public class BotController : MonoBehaviour {
         {
             m_Animator = GetComponent<Animator>();
         }
+        
 
-		
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -45,7 +70,7 @@ public class BotController : MonoBehaviour {
     }
     public void ae_attack_end()
     {
-        if(m_isPlayer == true)
+        if(m_Bot_type == eBot_type.player)
         {
             // 플레이어가 계속 공격 버튼을 누르고 있으면 다음 공격 유지.
             Gui_PlayUI comp = GuiMgr.Instance.Find<Gui_PlayUI>();

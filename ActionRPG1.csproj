@@ -90,6 +90,7 @@
     <Compile Include="Assets\00 root\scripts\Data\SkillInfo.cs" />
     <Compile Include="Assets\00 root\scripts\Data\StatusNbuff.cs" />
     <Compile Include="Assets\00 root\scripts\DefineID.cs" />
+    <Compile Include="Assets\00 root\scripts\Gui\Entity\Gui_BotUIManager.cs" />
     <Compile Include="Assets\00 root\scripts\Gui\Entity\Gui_Login.cs" />
     <Compile Include="Assets\00 root\scripts\Gui\Entity\Gui_PlayUI.cs" />
     <Compile Include="Assets\00 root\scripts\Gui\Entity\Gui_PopupMessage.cs" />
@@ -97,6 +98,8 @@
     <Compile Include="Assets\00 root\scripts\Gui\GuiBase.cs" />
     <Compile Include="Assets\00 root\scripts\Gui\GuiMgr.cs" />
     <Compile Include="Assets\00 root\scripts\Gui\GuiStartObject.cs" />
+    <Compile Include="Assets\00 root\scripts\Gui\UI_BotUI.cs" />
+    <Compile Include="Assets\00 root\scripts\Gui\UiFollowTarget.cs" />
     <Compile Include="Assets\00 root\scripts\InGame\AiEnemy_controller.cs" />
     <Compile Include="Assets\00 root\scripts\InGame\AiFriend_controller.cs" />
     <Compile Include="Assets\00 root\scripts\InGame\AiManager.cs" />
@@ -1137,6 +1140,18 @@
     <Compile Include="Assets\iTween\iTween.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Cute_Knight\README.txt" />
+    <None Include="Assets\Cute_Knight\Shader\Unitychan_chara_akarami_blend.shader" />
+    <None Include="Assets\Cute_Knight\Shader\Unitychan_chara_eye.shader" />
+    <None Include="Assets\Cute_Knight\Shader\Unitychan_chara_eye_blend.shader" />
+    <None Include="Assets\Cute_Knight\Shader\Unitychan_chara_eyelash_blend.shader" />
+    <None Include="Assets\Cute_Knight\Shader\Unitychan_chara_fuku.shader" />
+    <None Include="Assets\Cute_Knight\Shader\Unitychan_chara_fuku_ds.shader" />
+    <None Include="Assets\Cute_Knight\Shader\Unitychan_chara_hada.shader" />
+    <None Include="Assets\Cute_Knight\Shader\Unitychan_chara_hada_blend.shader" />
+    <None Include="Assets\Cute_Knight\Shader\Unitychan_chara_hair.shader" />
+    <None Include="Assets\Cute_Knight\Shader\Unitychan_chara_hair_ds.shader" />
+    <None Include="Assets\Cute_Knight\scene\AlphaMask.shader" />
     <None Include="Assets\EasyTouch\Readme_first.txt" />
     <None Include="Assets\Haruko\ReadMe.txt" />
     <None Include="Assets\IGSoft_Resources\Projects\RefResources\Effect_Res\Shader\Eff_MultiplyDouble.shader" />

@@ -24,7 +24,7 @@ public class Player_controller : MonoBehaviour {
         }
         DontDestroyOnLoad(this.gameObject);
 
-        Startup();
+        
     }
     #endregion Singleton
 
@@ -38,12 +38,14 @@ public class Player_controller : MonoBehaviour {
 
         // bot Data 설정 및 생성 후
         m_BotController = GetComponentInChildren<BotController>();
-        m_BotController.SetPlayer();
+        StartCoroutine( m_BotController.SetPlayer() );
+
     }
     // Use this for initialization
     void Start () {
-        
-	}
+        Startup();
+
+    }
 	
 	// Update is called once per frame
 	void Update () {

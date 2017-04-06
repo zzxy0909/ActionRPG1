@@ -89,6 +89,19 @@ public class GuiMgr : MonoBehaviour
         return null;
     }
 
+    public void AddShowEntity(GuiBase v_gui_base)
+    {
+        if(v_gui_base != null)
+        {
+            string strname = v_gui_base.gameObject.name;
+            if (_showGuiEntityList.ContainsKey(strname) == false)
+            {
+                _showGuiEntityList.Add(strname, v_gui_base);
+                Debug.Log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~  _showGuiEntityList.Add:" + strname);
+            }
+        }
+    }
+
     public T Show<T>(ELayerType pLayer, bool pShow, JSONNode pParams) where T : GuiBase
     {
         string guiTypeName = typeof(T).ToString();
@@ -208,8 +221,6 @@ public class GuiMgr : MonoBehaviour
 
                 _hideGuiEntityList.Add(guiTypeName, guiBase);
 
-                guiBase.OnFinish();
-
                 guiBase.StopAllCoroutines();
                 guiBase.gameObject.SetActive(false);
             }
@@ -235,8 +246,7 @@ public class GuiMgr : MonoBehaviour
 
     }
 
-	List<GuiBase> _goToPools = new List<GuiBase>();
-    protected void Update()
+	protected void Update()
     {
         if (_TransBack == null)
         {
@@ -250,32 +260,7 @@ public class GuiMgr : MonoBehaviour
         {
             _TransCache = _instance.transform.Find(strCachePath);
         }
-
-        if (0 == _hideGuiEntityList.Count)
-        {
-            return;
-        }
-			
-        foreach (GuiBase guiBase in _hideGuiEntityList.Values)
-        {
-            if (guiBase.IsFinished)
-            {
-				_goToPools.Add(guiBase);
-            }
-        }
-
-		if (null != _goToPools)
-        {
-			foreach (GuiBase guiBase in _goToPools)
-            {
-                _hideGuiEntityList.Remove(guiBase.GetType().ToString());
-
-				if (_guiEntityPools.Contains (guiBase) == false) {
-					_guiEntityPools.Add (guiBase);
-				}
-            }
-			_goToPools.Clear ();
-        }
+        
     }
 
     protected void OnDestroy()

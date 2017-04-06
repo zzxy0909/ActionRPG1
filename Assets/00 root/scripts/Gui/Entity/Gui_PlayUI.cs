@@ -7,6 +7,19 @@ public class Gui_PlayUI : GuiBase
     public int m_lastAttackSkill = 0;
     public bool m_isDownAttackSkill = false;
 
+    public void Start()
+    {
+        Gui_PlayUI tmp = GuiMgr.Instance.Find<Gui_PlayUI>();
+        if(tmp == null)
+        {
+            GuiMgr.Instance.AddShowEntity(this);
+        }else
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+    }
+
     // float m_minTime_attackSkill = 1f; // 다른 공격 시작 은 최소 1초.
     public void UpAttackSkill()
     {
