@@ -19,6 +19,15 @@ public class StatusNbuff : MonoBehaviour {
     public int statusPoint = 0;
     public bool dead = false;
 
+    public class resist
+    {
+        public int poisonResist = 0;
+		public int silenceResist = 0;
+		public int webResist = 0;
+		public int stunResist = 0;
+    }
+    resist statusResist ;
+
 	// Use this for initialization
 	void Start () {
 		

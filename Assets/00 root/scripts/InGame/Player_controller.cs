@@ -29,7 +29,9 @@ public class Player_controller : MonoBehaviour {
     #endregion Singleton
 
     public BotController m_BotController;
+    public UI_BotUI m_BotUI;
     public ETInput m_ETInput;
+    public StatusNbuff m_StatusNbuff;
 
     public void Startup()
     {
@@ -38,7 +40,7 @@ public class Player_controller : MonoBehaviour {
 
         // bot Data 설정 및 생성 후
         m_BotController = GetComponentInChildren<BotController>();
-        StartCoroutine( m_BotController.SetPlayer() );
+        StartCoroutine( m_BotController.SetPlayer(m_BotUI) );
 
     }
     // Use this for initialization

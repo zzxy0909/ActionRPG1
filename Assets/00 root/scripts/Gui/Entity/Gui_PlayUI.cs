@@ -9,6 +9,10 @@ public class Gui_PlayUI : GuiBase
 
     public void Start()
     {
+        // editor 진입시 오류 체크
+        if (GuiMgr.Instance == null)
+            return;
+
         Gui_PlayUI tmp = GuiMgr.Instance.Find<Gui_PlayUI>();
         if(tmp == null)
         {

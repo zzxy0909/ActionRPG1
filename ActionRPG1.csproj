@@ -90,7 +90,7 @@
     <Compile Include="Assets\00 root\scripts\Data\SkillInfo.cs" />
     <Compile Include="Assets\00 root\scripts\Data\StatusNbuff.cs" />
     <Compile Include="Assets\00 root\scripts\DefineID.cs" />
-    <Compile Include="Assets\00 root\scripts\Gui\Entity\Gui_BotUIManager.cs" />
+    <Compile Include="Assets\00 root\scripts\Gui\Entity\Gui_BotUIRoot.cs" />
     <Compile Include="Assets\00 root\scripts\Gui\Entity\Gui_Login.cs" />
     <Compile Include="Assets\00 root\scripts\Gui\Entity\Gui_PlayUI.cs" />
     <Compile Include="Assets\00 root\scripts\Gui\Entity\Gui_PopupMessage.cs" />

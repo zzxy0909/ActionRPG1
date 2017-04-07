@@ -15,27 +15,36 @@ public class BotController : MonoBehaviour {
     public Move_stop_option m_Move_stop_option = new Move_stop_option();
 
     public eBot_type m_Bot_type = eBot_type.enemy;  // BotType 에서 player, Enemy 등 으로 구분 할 수도 있음.
-    public UI_BotUI m_BotUI;
     public Transform m_posHPbar;
 
-    Gui_BotUIManager m_Gui_BotUIManager;
-    public IEnumerator SetPlayer()
+    UI_BotUI m_BotUI;
+    Gui_BotUIRoot m_Gui_BotUIRoot;
+    public IEnumerator SetPlayer(UI_BotUI v_UI_BotUI)
     {
         m_Bot_type = eBot_type.player;
 
-        while (m_Gui_BotUIManager == null)
+        while (m_Gui_BotUIRoot == null)
         {
-            m_Gui_BotUIManager = GuiMgr.Instance.Find<Gui_BotUIManager>();
+            m_Gui_BotUIRoot = GuiMgr.Instance.Find<Gui_BotUIRoot>();
             yield return new WaitForEndOfFrame();
         }
 
         // BotUI 설정.
-        GameObject guitmp = m_Gui_BotUIManager.Add_BotUI(eBot_type.player);
-        if(guitmp != null)
+        if(v_UI_BotUI == null)
         {
-            m_BotUI = guitmp.GetComponent<UI_BotUI>();
-            m_BotUI.Set_UI_Info(m_posHPbar);
+            m_BotUI = transform.parent.GetComponent<UI_BotUI>();
+        }else
+        {
+            m_BotUI = v_UI_BotUI;
         }
+        m_BotUI.Init_UI_Info(m_posHPbar);
+
+        //GameObject guitmp = m_Gui_BotUIRoot.Add_BotUI(eBot_type.player);
+        //if(guitmp != null)
+        //{
+        //    m_BotUI = guitmp.GetComponent<UI_BotUI>();
+        //    m_BotUI.Init_UI_Info(m_posHPbar);
+        //}
 
     }
     // Use this for initialization
@@ -48,11 +57,6 @@ public class BotController : MonoBehaviour {
 
     }
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
     public void SetIdle()
     {
         // 각 속성이 0 이면 idle
