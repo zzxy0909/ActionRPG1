@@ -49,8 +49,13 @@ public class ETInput : MonoBehaviour {
         // transform.Translate(Vector3.forward * move.joystickValue.magnitude * Time.deltaTime);	
         Vector2 joystickMove = move.joystickAxis;
         joystickMove.Normalize();
+        // top view
         Vector3 joystickWorldDirection = Camera.main.transform.TransformDirection(new Vector3(joystickMove.x, 0, joystickMove.y)).normalized;
-        Vector3 resultPos = transform.position + joystickWorldDirection; // *0.05f; // * 100.0f; // Need : test                
+        Vector3 resultPos = transform.position + joystickWorldDirection; // *0.05f; // * 100.0f; // Need : test     
+
+        // first view
+//???        Vector3 resultPos = transform.position + transform.forward * joystickMove.y; // *0.05f; // * 100.0f; // Need : test     
+
 
         // Vector3 resultPos = transform.forward * move.joystickValue.magnitude * 0.1f; // Time.deltaTime;
         m_agent.SetDestination(resultPos);

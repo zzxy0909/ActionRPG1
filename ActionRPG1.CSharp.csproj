@@ -90,6 +90,7 @@
     <Compile Include="Assets\00 root\scripts\Data\SkillInfo.cs" />
     <Compile Include="Assets\00 root\scripts\Data\StatusNbuff.cs" />
     <Compile Include="Assets\00 root\scripts\DefineID.cs" />
+    <Compile Include="Assets\00 root\scripts\Gui\Entity\Gui_BotUIRoot.cs" />
     <Compile Include="Assets\00 root\scripts\Gui\Entity\Gui_Login.cs" />
     <Compile Include="Assets\00 root\scripts\Gui\Entity\Gui_PlayUI.cs" />
     <Compile Include="Assets\00 root\scripts\Gui\Entity\Gui_PopupMessage.cs" />
@@ -97,6 +98,8 @@
     <Compile Include="Assets\00 root\scripts\Gui\GuiBase.cs" />
     <Compile Include="Assets\00 root\scripts\Gui\GuiMgr.cs" />
     <Compile Include="Assets\00 root\scripts\Gui\GuiStartObject.cs" />
+    <Compile Include="Assets\00 root\scripts\Gui\UI_BotUI.cs" />
+    <Compile Include="Assets\00 root\scripts\Gui\UiFollowTarget.cs" />
     <Compile Include="Assets\00 root\scripts\InGame\AiEnemy_controller.cs" />
     <Compile Include="Assets\00 root\scripts\InGame\AiFriend_controller.cs" />
     <Compile Include="Assets\00 root\scripts\InGame\AiManager.cs" />

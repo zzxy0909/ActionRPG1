@@ -72,6 +72,7 @@ public class BotController : MonoBehaviour {
     public void ae_attack_start()
     {
     }
+
     public void ae_attack_end()
     {
         if(m_Bot_type == eBot_type.player)
@@ -80,6 +81,18 @@ public class BotController : MonoBehaviour {
             Gui_PlayUI comp = GuiMgr.Instance.Find<Gui_PlayUI>();
             if (comp != null && comp.m_isDownAttackSkill == true)
             {
+                int att_val = m_Animator.GetInteger(DefineID.Ani_attack);
+                if(att_val >= DefineID.Num_StartLinkAttack)
+                {
+                    att_val++; 
+                    // 연속 공격
+                    if (att_val >= (DefineID.Num_StartLinkAttack + DefineID.Max_LinkAttackCount) )
+                    {
+                        att_val = DefineID.Num_StartLinkAttack;
+                    }
+                        
+                }
+                m_Animator.SetInteger(DefineID.Ani_attack, att_val);
                 m_Animator.SetTrigger(DefineID.Ani_attack_start);
                 return;
             }

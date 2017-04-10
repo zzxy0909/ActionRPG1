@@ -37,7 +37,7 @@ public class Gui_PlayUI : GuiBase
     public void DownAttack_a()
     {
         // bot table default attack no 사용 
-        int n = 2; // test
+        int n = 90; // test
         // 계속 같은 공격 버튼을 누르고 있으면 공격 유지 및 더블 클릭 시 한번만 공격 진행 하기.
         if(m_lastAttackSkill == n
             && Player_controller.Instance.m_BotController.m_Move_stop_option.m_isPlaySkillorAttack == true
