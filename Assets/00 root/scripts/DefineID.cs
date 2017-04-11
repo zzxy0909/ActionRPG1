@@ -9,7 +9,9 @@ public class DefineID {
     public const string Ani_run = "run";
     public const string Ani_attack = "attack";
     public const string Ani_attack_start = "attack_start";
+    public const string Ani_dash = "dash";
 
     public const int Max_LinkAttackCount = 3;
     public const int Num_StartLinkAttack = 90;
+    public const int Max_autoDashCheckValue = 10;
 }

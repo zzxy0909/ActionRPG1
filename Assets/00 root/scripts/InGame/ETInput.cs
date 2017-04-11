@@ -67,14 +67,21 @@ public class ETInput : MonoBehaviour {
         if(m_PlayerController.m_BotController.m_Move_stop_option.checkStopCase() == false)
         {
             MoveProc(move);
-        }else if(m_PlayerController.m_BotController.m_Move_stop_option.m_isPlaySkillorAttack == true
+        }
+        // 연속 공격에 방향 전환 하지않고 대쉬 공격위주로 처리함.
+        if(m_PlayerController.m_BotController.m_Move_stop_option.m_autoDash == true)
+        {
+
+        }
+        else if (m_PlayerController.m_BotController.m_Move_stop_option.m_autoDash == false
+            && m_PlayerController.m_BotController.m_Move_stop_option.m_isPlaySkillorAttack == true
             && m_PlayerController.m_BotController.m_Move_stop_option.m_isPlayAvoid == false
             )
         {
             float angle = move.Axis2Angle(true);
             transform.rotation = Quaternion.Euler(new Vector3(0, angle, 0));
         }
-	}
+    }
     void StopProc()
     {
         m_agent.Stop();

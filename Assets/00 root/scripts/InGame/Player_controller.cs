@@ -31,6 +31,7 @@ public class Player_controller : MonoBehaviour {
     public BotController m_BotController;
     public UI_BotUI m_BotUI;
     public ETInput m_ETInput;
+    public Skill_controller Skill_controller;
     public StatusNbuff m_StatusNbuff;
 
     public void Startup()
@@ -40,7 +41,7 @@ public class Player_controller : MonoBehaviour {
 
         // bot Data 설정 및 생성 후
         m_BotController = GetComponentInChildren<BotController>();
-        StartCoroutine( m_BotController.SetPlayer(m_BotUI) );
+        StartCoroutine( SetPlayer() );
 
     }
     // Use this for initialization
@@ -53,4 +54,30 @@ public class Player_controller : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    Gui_BotUIRoot m_Gui_BotUIRoot;
+    public IEnumerator SetPlayer()
+    {
+        m_BotController.m_Bot_type = eBot_type.player;
+
+        while (m_Gui_BotUIRoot == null)
+        {
+            m_Gui_BotUIRoot = GuiMgr.Instance.Find<Gui_BotUIRoot>();
+            yield return new WaitForEndOfFrame();
+        }
+
+        // BotUI 설정.
+        if (m_BotUI == null)
+        {
+            m_BotUI = GetComponent<UI_BotUI>();
+        }
+        m_BotUI.Init_UI_Info(m_BotController.m_posHPbar);
+        
+
+        if (m_BotController.m_controllerAgent == null)
+        {
+            m_BotController.m_controllerAgent = m_ETInput.m_agent; // GetComponent<NavMeshAgent>();
+        }
+
+    }
 }

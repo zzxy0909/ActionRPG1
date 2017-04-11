@@ -7,7 +7,7 @@ public class SkillInfo
 {
     public int m_id;// in table.
     public float m_coolTime = 0;
-    public string m_aniName;
+    public int m_attackAniNum;
     public float m_attackRange = 0;
     public bool m_canCalcel = false;
     public int m_targetType = 0; // 0 : attack enemy, 1: our team assistance
