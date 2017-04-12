@@ -8,6 +8,7 @@ public class UiFollowTarget : MonoBehaviour {
     public Camera m_gameCamera;
     public Camera m_uiCamera;
 
+    public float m_xOffset = 0f; // UI 포지션 기준 + 옵션값
     public float m_yOffset = 0f; // UI 포지션 기준 + 옵션값
     Transform m_thisTrans;
     private void Awake()
@@ -51,7 +52,7 @@ public class UiFollowTarget : MonoBehaviour {
             
             transform.position = m_uiCamera.ViewportToWorldPoint(posTmp);
             posTmp = transform.localPosition;
-            posTmp.x = 0f; // Mathf.FloorToInt(posTmp.x);
+            posTmp.x += m_xOffset; // Mathf.FloorToInt(posTmp.x);
             posTmp.y += m_yOffset; // Mathf.FloorToInt(posTmp.y) + m_yOffset;
             posTmp.z = 0f;
             transform.localPosition = posTmp;
