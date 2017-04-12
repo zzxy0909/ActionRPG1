@@ -77,7 +77,6 @@ public class Gui_PlayUI : GuiBase
         else
         {
             Player_controller.Instance.m_BotController.SetDashAttack(n);
-            Player_controller.Instance.m_BotController.SetRun_end();
         }
         // 
 

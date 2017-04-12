@@ -10,7 +10,7 @@ public enum eBot_type
     boss,
 }
 
-public class BotController : MonoBehaviour {
+public partial class BotController : MonoBehaviour {
     
     public Animator m_Animator;
     public Move_stop_option m_Move_stop_option = new Move_stop_option();
@@ -26,7 +26,13 @@ public class BotController : MonoBehaviour {
         {
             m_Animator = GetComponent<Animator>();
         }
+        if(m_LegoEffect == null)
+        {
+            m_LegoEffect = GetComponent<LegoEffect>();
+        }
     }
+
+    //========================== dash attack 관련
     float lastCheckTime = 0;
     float checkTime = 0.1f;
     int checkDashCount = 0;
@@ -55,6 +61,7 @@ public class BotController : MonoBehaviour {
         checkDashCount = 0;
         m_Move_stop_option.m_autoDash = false;
     }
+    //================================================
 
     public void SetIdle()
     {
@@ -68,47 +75,8 @@ public class BotController : MonoBehaviour {
         }
         
     }
-    public void ae_attack_start()
-    {
-    }
 
-    public void ae_attack_end()
-    {
-        if(m_Bot_type == eBot_type.player)
-        {
-            // 플레이어가 계속 공격 버튼을 누르고 있으면 다음 공격 유지 기능 뺌. 약약강은 이전 공격이 연속 공격에 속하면 반복 해서 기본 공격(타임으로 연속 공격 속성을 관리 할수 있음.
-            //Gui_PlayUI comp = GuiMgr.Instance.Find<Gui_PlayUI>();
-            //if (comp != null && comp.m_isDownAttackSkill == true)
-            //{
-            //    int att_val = m_Animator.GetInteger(DefineID.Ani_attack);
-            //    if(att_val >= DefineID.Num_StartLinkAttack)
-            //    {
-            //        att_val++; 
-            //        // 연속 공격
-            //        if (att_val >= (DefineID.Num_StartLinkAttack + DefineID.Max_LinkAttackCount) )
-            //        {
-            //            att_val = DefineID.Num_StartLinkAttack;
-            //        }
-
-            //    }
-            //    m_Animator.SetInteger(DefineID.Ani_attack, att_val);
-            //    m_Animator.SetTrigger(DefineID.Ani_attack_start);
-            //    return;
-            //}
-
-            int att_val = m_Animator.GetInteger(DefineID.Ani_attack);
-            if (att_val >= DefineID.Num_StartLinkAttack 
-                && att_val < (DefineID.Num_StartLinkAttack + DefineID.Max_LinkAttackCount) )
-            {
-                // 연속 공격 대기
-                m_Move_stop_option.m_isPlaySkillorAttack = false;
-                return;
-            }
-        }
-        m_Move_stop_option.m_isPlaySkillorAttack = false;
-        m_Animator.SetInteger(DefineID.Ani_attack, 0);
-    }
-
+    
     public void SetRun()
     {
         m_Animator.SetInteger(DefineID.Ani_run, 1);
@@ -159,14 +127,23 @@ public class BotController : MonoBehaviour {
     {
         if (m_Move_stop_option.m_isPlaySkillorAttack == true)
             return;
+        SetDashMove(true);
+
         SetAttack(n);
 
         //m_Move_stop_option.m_isPlaySkillorAttack = true;
         //m_Animator.SetTrigger(DefineID.Ani_attack_start);
 
-        StartCoroutine(DashMove(false));
-
         //m_Animator.SetInteger(DefineID.Ani_attack, n);
+    }
+
+    void SetDashMove(bool v_playAni)
+    {
+        if (v_playAni == true)
+        {
+            m_Animator.SetBool(DefineID.Ani_dash, true);
+        }
+        StartCoroutine(DashMove(v_playAni));
     }
 
     // 0.3초간 전방으로 이동
@@ -179,10 +156,12 @@ public class BotController : MonoBehaviour {
         if (b_dash == true)
             yield break;
         b_dash = true;
+        // 대시를 할때 런 상테는 종료 함.
+        Player_controller.Instance.m_BotController.SetRun_end();
 
         if (v_playAni == true)
         {
-            m_Animator.SetTrigger(DefineID.Ani_dash);
+            m_Animator.SetBool(DefineID.Ani_dash, true);
         }
 
         Vector3 resultPos = m_controllerAgent.transform.position + m_controllerAgent.transform.forward * dathDistence;
@@ -198,6 +177,6 @@ public class BotController : MonoBehaviour {
         m_controllerAgent.Stop();
 
         b_dash = false;
-
+        m_Animator.SetBool(DefineID.Ani_dash, false);
     }
 }
