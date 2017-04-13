@@ -151,6 +151,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\00 root\scripts\Editor\edBot.cs" />
+    <Compile Include="Assets\00 root\scripts\Editor\edEff_size_controller.cs" />
     <Compile Include="Assets\00 root\scripts\Editor\edPlayer.cs" />
     <Compile Include="Assets\EasyTouch\Plugins\Editor\GUIEasyButtonCallBack.cs" />
     <Compile Include="Assets\EasyTouch\Plugins\Editor\GUIEasyButtonInspector.cs" />
@@ -396,9 +397,11 @@
     <None Include="Assets\Cute_Knight\Shader\Unitychan_chara_hair.shader" />
     <None Include="Assets\Cute_Knight\Shader\Unitychan_chara_hair_ds.shader" />
     <None Include="Assets\Cute_Knight\scene\AlphaMask.shader" />
+    <None Include="Assets\EasyFadeObstructions\readme.txt" />
     <None Include="Assets\EasyTouch\Readme_first.txt" />
     <None Include="Assets\Haruko\ReadMe.txt" />
     <None Include="Assets\IGSoft_Resources\Projects\RefResources\Effect_Res\Shader\Eff_MultiplyDouble.shader" />
+    <None Include="Assets\IGSoft_Resources\ToolResources\EffectShader\FXMaker_Mask Additive Tint.shader" />
     <None Include="Assets\IGSoft_Tools\FXMaker\ToolResource\EditorShader\LineBackground.shader" />
     <None Include="Assets\IGSoft_Tools\FXMaker\ToolResource\EditorShader\LineColoredBlended.shader" />
     <None Include="Assets\IGSoft_Tools\FXMaker\ToolResource\UnityShader\FXMakerGrayscaleEffect.shader" />

@@ -41,11 +41,14 @@ public partial class BotController : MonoBehaviour {
         if(lastCheckTime < Time.time)
         {
             lastCheckTime = Time.time + checkTime;
-            if (m_Animator.GetInteger(DefineID.Ani_run) <= 0)
+            int runNum = m_Animator.GetInteger(DefineID.Ani_run);
+            if (runNum <= 0)
             {
                 resetDashFlag();
             }
-            else
+            else if(runNum > 0 
+                // && m_Move_stop_option.m_isJumping == false
+                )
             {
                 checkDashCount++;
                 if( DefineID.Max_autoDashCheckValue < checkDashCount )

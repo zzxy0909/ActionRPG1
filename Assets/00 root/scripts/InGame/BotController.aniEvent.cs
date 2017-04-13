@@ -64,4 +64,25 @@ public partial class BotController : MonoBehaviour {
             obj.transform.rotation = transform.rotation;
         }
     }
+
+    public void ae_JumpForword()
+    {
+        // dash 이용
+        StartCoroutine(IE_ae_JumpForword());
+    }
+    bool IE_ae_JumpForword_flag = false;
+    IEnumerator IE_ae_JumpForword()
+    {
+        if(IE_ae_JumpForword_flag == true)
+        {
+            yield break;
+        }
+        IE_ae_JumpForword_flag = true;
+        // ani event에서 시작 된것으로 준비 과정없이 바로 전방으로 이동.
+        yield return StartCoroutine(DashMove(false));
+
+
+        IE_ae_JumpForword_flag = false;
+
+    }
 }
