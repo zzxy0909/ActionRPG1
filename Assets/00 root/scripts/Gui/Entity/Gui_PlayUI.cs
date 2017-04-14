@@ -2,11 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+public class SkillButtonData
+{
+    public string expl_name;
+        
+}
+
 public class Gui_PlayUI : GuiBase
 {
     public int m_lastAttackSkill = 0;
     public bool m_isDownAttackSkill = false;
-
+    public SkillButtonData[] m_arrSkillButtonData;
     public void Start()
     {
         // editor 진입시 오류 체크
@@ -22,6 +29,19 @@ public class Gui_PlayUI : GuiBase
             Destroy(this.gameObject);
             return;
         }
+        testSkillButtonData();
+    }
+
+    void testSkillButtonData()
+    {
+        m_arrSkillButtonData = new SkillButtonData[6];
+        m_arrSkillButtonData[0].expl_name = "";
+        m_arrSkillButtonData[1].expl_name = "expl001";
+        m_arrSkillButtonData[2].expl_name = "expl002";
+        m_arrSkillButtonData[3].expl_name = "";
+        m_arrSkillButtonData[4].expl_name = "";
+        m_arrSkillButtonData[5].expl_name = "";
+
     }
 
     // float m_minTime_attackSkill = 1f; // 다른 공격 시작 은 최소 1초.
@@ -38,8 +58,10 @@ public class Gui_PlayUI : GuiBase
     {
         // bot table default attack no 사용 
         int n = 90; // test
+        Player_controller.Instance.m_BotController.Set_ExplosionData(m_arrSkillButtonData[0].expl_name);
+
         // 계속 같은 공격 버튼을 누르고 있으면 공격 유지 및 더블 클릭 시 한번만 공격 진행 하기.
-        if(Player_controller.Instance.m_BotController.m_Move_stop_option.m_isPlaySkillorAttack == true
+        if (Player_controller.Instance.m_BotController.m_Move_stop_option.m_isPlaySkillorAttack == true
             )
         {
             return;

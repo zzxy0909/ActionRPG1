@@ -5,6 +5,26 @@ using UnityEngine;
 public partial class BotController : MonoBehaviour {
 
     public LegoEffect m_LegoEffect;
+    public ExplosionData m_CurrentExplosionData;
+
+    //==============================================================
+    public GameObject m_AttackTarget = null;  // 설정 예정.
+    //====================================================================
+    public void Set_ExplosionData(string id)
+    {
+        m_CurrentExplosionData = ExplosionManager.Instance.Get_ExplosionData(id);
+    }
+    public void ae_Explosion()
+    {
+        if(m_CurrentExplosionData != null)
+        {
+            ExplosionManager.Instance.SpawnExplosion(m_CurrentExplosionData.effectPrefab.name, this.gameObject, m_AttackTarget);
+        }else
+        {
+            Debug.Log(" m_CurrentExplosionData == null ");
+        }
+            
+    }
 
     public void ae_attack_start()
     {
