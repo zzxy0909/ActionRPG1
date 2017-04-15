@@ -87,6 +87,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\00 root\scripts\Data\ExplosionData.cs" />
     <Compile Include="Assets\00 root\scripts\Data\SkillInfo.cs" />
     <Compile Include="Assets\00 root\scripts\Data\StatusNbuff.cs" />
     <Compile Include="Assets\00 root\scripts\DefineID.cs" />
@@ -106,6 +107,8 @@
     <Compile Include="Assets\00 root\scripts\InGame\BotController.aniEvent.cs" />
     <Compile Include="Assets\00 root\scripts\InGame\BotController.cs" />
     <Compile Include="Assets\00 root\scripts\InGame\ETInput.cs" />
+    <Compile Include="Assets\00 root\scripts\InGame\ExplosionController.cs" />
+    <Compile Include="Assets\00 root\scripts\InGame\ExplosionManager.cs" />
     <Compile Include="Assets\00 root\scripts\InGame\FindAttackTarget_option.cs" />
     <Compile Include="Assets\00 root\scripts\InGame\LegoEffect.cs" />
     <Compile Include="Assets\00 root\scripts\InGame\Move_stop_option.cs" />

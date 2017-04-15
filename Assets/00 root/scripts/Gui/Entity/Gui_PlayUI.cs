@@ -35,6 +35,11 @@ public class Gui_PlayUI : GuiBase
     void testSkillButtonData()
     {
         m_arrSkillButtonData = new SkillButtonData[6];
+        for(int i=0; i< m_arrSkillButtonData.Length; i++ )
+        {
+            m_arrSkillButtonData[i] = new SkillButtonData();
+        }
+        
         m_arrSkillButtonData[0].expl_name = "";
         m_arrSkillButtonData[1].expl_name = "expl001";
         m_arrSkillButtonData[2].expl_name = "expl002";
@@ -70,6 +75,7 @@ public class Gui_PlayUI : GuiBase
     }
     public void DownAttack_b()
     {
+        Player_controller.Instance.m_BotController.Set_ExplosionData(m_arrSkillButtonData[1].expl_name);
         DownAttackSkill(2);
     }
     public void DownAttack_c()
@@ -85,6 +91,8 @@ public class Gui_PlayUI : GuiBase
         // DownAttackSkill(12);
         m_lastAttackSkill = 12;
         m_isDownAttackSkill = true;
+        Player_controller.Instance.m_BotController.Set_ExplosionData(m_arrSkillButtonData[2].expl_name);
+
         Player_controller.Instance.m_BotController.SetDashAttack(12);
     }
     public void DownAttackSkill(int n)

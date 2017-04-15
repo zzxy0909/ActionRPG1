@@ -72,7 +72,7 @@ public class ExplosionManager : MonoBehaviour {
             switch(l_type)
             {
                 case ExplosionData.eTargetType.self:
-                    spawn_pos = v_attacker.transform.position + expl_data.m_TargetPositionOffset;
+                    spawn_pos = v_attacker.transform.position + (v_attacker.transform.forward * expl_data.m_TargetPositionOffset.z) + new Vector3(0, expl_data.m_TargetPositionOffset.y, 0) ;
                     break;
                 case ExplosionData.eTargetType.enemy:
                     if(v_target != null)
@@ -80,11 +80,11 @@ public class ExplosionManager : MonoBehaviour {
                         spawn_pos = v_target.transform.position + expl_data.m_TargetPositionOffset;
                     }else
                     {
-                        spawn_pos = v_attacker.transform.position + expl_data.m_TargetPositionOffset;
+                        spawn_pos = v_attacker.transform.position + (v_attacker.transform.forward * expl_data.m_TargetPositionOffset.z) + new Vector3(0, expl_data.m_TargetPositionOffset.y, 0);
                     }
                     break;
                 default:
-                    spawn_pos = v_attacker.transform.position + expl_data.m_TargetPositionOffset;
+                    spawn_pos = v_attacker.transform.position + (v_attacker.transform.forward * expl_data.m_TargetPositionOffset.z) + new Vector3(0, expl_data.m_TargetPositionOffset.y, 0);
                     break;
             }
 
