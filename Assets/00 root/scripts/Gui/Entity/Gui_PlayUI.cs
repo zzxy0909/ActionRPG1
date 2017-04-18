@@ -6,7 +6,7 @@ using UnityEngine;
 public class SkillButtonData
 {
     public string expl_name;
-        
+    public int attack_num;    
 }
 
 public class Gui_PlayUI : GuiBase
@@ -40,12 +40,18 @@ public class Gui_PlayUI : GuiBase
             m_arrSkillButtonData[i] = new SkillButtonData();
         }
         
-        m_arrSkillButtonData[0].expl_name = "";
+        m_arrSkillButtonData[0].expl_name = ""; // link attack
+        m_arrSkillButtonData[0].attack_num = 90;
         m_arrSkillButtonData[1].expl_name = "expl001";
+        m_arrSkillButtonData[1].attack_num = 2;
         m_arrSkillButtonData[2].expl_name = "expl002";
+        m_arrSkillButtonData[2].attack_num = 2;
         m_arrSkillButtonData[3].expl_name = "";
+        m_arrSkillButtonData[3].attack_num = 2;
         m_arrSkillButtonData[4].expl_name = "";
+        m_arrSkillButtonData[4].attack_num = 2;
         m_arrSkillButtonData[5].expl_name = "";
+        m_arrSkillButtonData[5].attack_num = 2;
 
     }
 
@@ -59,11 +65,11 @@ public class Gui_PlayUI : GuiBase
         //Player_controller.Instance.m_BotController.m_Move_stop_option.m_isPlaySkillorAttack = false;
     }
 
-    public void DownAttack_a()
+    public void DownAttack_linkAttack()
     {
         // bot table default attack no 사용 
         int n = 90; // test
-        Player_controller.Instance.m_BotController.Set_ExplosionData(m_arrSkillButtonData[0].expl_name);
+        Player_controller.Instance.m_BotController.Set_ExplosionData("");
 
         // 계속 같은 공격 버튼을 누르고 있으면 공격 유지 및 더블 클릭 시 한번만 공격 진행 하기.
         if (Player_controller.Instance.m_BotController.m_Move_stop_option.m_isPlaySkillorAttack == true
@@ -73,40 +79,75 @@ public class Gui_PlayUI : GuiBase
         }
         DownAttackSkill(n);
     }
+    public void DownAttack_a()
+    {
+        if (Player_controller.Instance.m_BotController.m_Move_stop_option.m_isPlaySkillorAttack == true)
+            return;
+
+        // 장비 바꾸어 잡고 스킬 실행
+        // front slot 부터 right ...  0~3 index
+        EquipManager.Instance.ChangeEquip(0);
+
+        SkillButtonData data = m_arrSkillButtonData[1];
+        Player_controller.Instance.m_BotController.Set_ExplosionData(data.expl_name);
+        DownAttackSkill(data.attack_num);
+    }
     public void DownAttack_b()
     {
-        Player_controller.Instance.m_BotController.Set_ExplosionData(m_arrSkillButtonData[1].expl_name);
-        DownAttackSkill(2);
+        if (Player_controller.Instance.m_BotController.m_Move_stop_option.m_isPlaySkillorAttack == true)
+            return;
+
+        EquipManager.Instance.ChangeEquip(1);
+
+        SkillButtonData data = m_arrSkillButtonData[2];
+        Player_controller.Instance.m_BotController.Set_ExplosionData(data.expl_name);
+        DownAttackSkill(data.attack_num);
     }
     public void DownAttack_c()
     {
-        DownAttackSkill(3);
+        if (Player_controller.Instance.m_BotController.m_Move_stop_option.m_isPlaySkillorAttack == true)
+            return;
+
+        EquipManager.Instance.ChangeEquip(2);
+
+        SkillButtonData data = m_arrSkillButtonData[3];
+        Player_controller.Instance.m_BotController.Set_ExplosionData(data.expl_name);
+        DownAttackSkill(data.attack_num);
     }
     public void DownAttack_d()
     {
-        DownAttackSkill(4);
+        if (Player_controller.Instance.m_BotController.m_Move_stop_option.m_isPlaySkillorAttack == true)
+            return;
+
+        EquipManager.Instance.ChangeEquip(3);
+
+        SkillButtonData data = m_arrSkillButtonData[4];
+
+        Player_controller.Instance.m_BotController.Set_ExplosionData(data.expl_name);
+        DownAttackSkill(data.attack_num);
     }
     public void DownAttack_e()
     {
-        // DownAttackSkill(12);
-        m_lastAttackSkill = 12;
-        m_isDownAttackSkill = true;
-        Player_controller.Instance.m_BotController.Set_ExplosionData(m_arrSkillButtonData[2].expl_name);
+        if (Player_controller.Instance.m_BotController.m_Move_stop_option.m_isPlaySkillorAttack == true)
+            return;
+//        EquipManager.Instance.ChangeEquip(4);
 
-        Player_controller.Instance.m_BotController.SetDashAttack(12);
+        SkillButtonData data = m_arrSkillButtonData[5];
+        Player_controller.Instance.m_BotController.Set_ExplosionData(data.expl_name);
+        DownAttackSkill(data.attack_num);
     }
-    public void DownAttackSkill(int n)
+
+    public void DownAttackSkill(int v_attack_num)
     {
-        m_lastAttackSkill = n;
-        m_isDownAttackSkill = true;
+        m_lastAttackSkill = v_attack_num;
 
         if (Player_controller.Instance.m_BotController.m_Move_stop_option.m_autoDash == false)
         {
-            Player_controller.Instance.m_BotController.SetAttack(n);
+            Player_controller.Instance.m_BotController.SetAttack(v_attack_num);
         }
         else
         {
-            Player_controller.Instance.m_BotController.SetDashAttack(n);
+            Player_controller.Instance.m_BotController.SetDashAttack(v_attack_num);
         }
         // 
 

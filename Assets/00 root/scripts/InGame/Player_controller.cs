@@ -31,8 +31,11 @@ public class Player_controller : MonoBehaviour {
     public BotController m_BotController;
     public UI_BotUI m_BotUI;
     public ETInput m_ETInput;
-    public Skill_controller Skill_controller;
+    public Skill_controller m_Skill_controller;
+    public equipController m_equipController;
     public StatusNbuff m_StatusNbuff;
+
+    public bool m_StartupOK = false;
 
     public void Startup()
     {
@@ -79,5 +82,7 @@ public class Player_controller : MonoBehaviour {
             m_BotController.m_controllerAgent = m_ETInput.m_agent; // GetComponent<NavMeshAgent>();
         }
 
+
+        m_StartupOK = true;
     }
 }

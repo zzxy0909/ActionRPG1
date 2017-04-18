@@ -87,8 +87,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\00 root\scripts\Data\EquipData.cs" />
     <Compile Include="Assets\00 root\scripts\Data\ExplosionData.cs" />
     <Compile Include="Assets\00 root\scripts\Data\SkillInfo.cs" />
+    <Compile Include="Assets\00 root\scripts\Data\SlotData.cs" />
     <Compile Include="Assets\00 root\scripts\Data\StatusNbuff.cs" />
     <Compile Include="Assets\00 root\scripts\DefineID.cs" />
     <Compile Include="Assets\00 root\scripts\Gui\Entity\Gui_BotUIRoot.cs" />
@@ -101,12 +103,8 @@
     <Compile Include="Assets\00 root\scripts\Gui\GuiStartObject.cs" />
     <Compile Include="Assets\00 root\scripts\Gui\UI_BotUI.cs" />
     <Compile Include="Assets\00 root\scripts\Gui\UiFollowTarget.cs" />
-    <Compile Include="Assets\00 root\scripts\InGame\AiEnemy_controller.cs" />
-    <Compile Include="Assets\00 root\scripts\InGame\AiFriend_controller.cs" />
-    <Compile Include="Assets\00 root\scripts\InGame\AiManager.cs" />
-    <Compile Include="Assets\00 root\scripts\InGame\BotController.aniEvent.cs" />
-    <Compile Include="Assets\00 root\scripts\InGame\BotController.cs" />
     <Compile Include="Assets\00 root\scripts\InGame\ETInput.cs" />
+    <Compile Include="Assets\00 root\scripts\InGame\EquipManager.cs" />
     <Compile Include="Assets\00 root\scripts\InGame\ExplosionController.cs" />
     <Compile Include="Assets\00 root\scripts\InGame\ExplosionManager.cs" />
     <Compile Include="Assets\00 root\scripts\InGame\FindAttackTarget_option.cs" />
@@ -114,7 +112,14 @@
     <Compile Include="Assets\00 root\scripts\InGame\Move_stop_option.cs" />
     <Compile Include="Assets\00 root\scripts\InGame\Player_controller.cs" />
     <Compile Include="Assets\00 root\scripts\InGame\Skill_controller.cs" />
+    <Compile Include="Assets\00 root\scripts\InGame\SlotManager.cs" />
+    <Compile Include="Assets\00 root\scripts\InGame\ai\AiEnemy_controller.cs" />
+    <Compile Include="Assets\00 root\scripts\InGame\ai\AiFriend_controller.cs" />
+    <Compile Include="Assets\00 root\scripts\InGame\ai\AiManager.cs" />
+    <Compile Include="Assets\00 root\scripts\InGame\ai\BotController.aniEvent.cs" />
+    <Compile Include="Assets\00 root\scripts\InGame\ai\BotController.cs" />
     <Compile Include="Assets\00 root\scripts\InGame\eff_size_controller.cs" />
+    <Compile Include="Assets\00 root\scripts\InGame\equipController.cs" />
     <Compile Include="Assets\00 root\scripts\util\SetChildMainCamera.cs" />
     <Compile Include="Assets\00 root\scripts\util\SmoothFollowObj.cs" />
     <Compile Include="Assets\EasyFadeObstructions\EasyFadeObstruction.cs" />
@@ -1362,6 +1367,7 @@
     <None Include="Assets\Square City Architect\Shaders\BuildingsVertexColorPixel.shader" />
     <None Include="Assets\Square City Architect\Shaders\Neon.shader" />
     <None Include="Assets\Square City Architect\Shaders\VegetationAnim.shader" />
+    <None Include="Assets\Square City Architect\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
     <None Include="Assets\Square City Architect\Standard Assets\Effects\ImageEffects\Shaders\BlendModesOverlay.shader" />
     <None Include="Assets\Square City Architect\Standard Assets\Effects\ImageEffects\Shaders\BlurEffectConeTaps.shader" />
     <None Include="Assets\Square City Architect\Standard Assets\Effects\ImageEffects\Shaders\CameraMotionBlur.shader" />
@@ -1406,6 +1412,7 @@
     <None Include="Assets\Square City Architect\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAA3Console.shader" />
     <None Include="Assets\Square City Architect\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAAPreset2.shader" />
     <None Include="Assets\Square City Architect\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAAPreset3.shader" />
+    <None Include="Assets\Square City Architect\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\NFAA.shader" />
     <None Include="Assets\Square City Architect\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\SSAA.shader" />
     <None Include="Assets\Square City Architect\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\Blend.shader" />
     <None Include="Assets\Square City Architect\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendForBloom.shader" />
@@ -1427,10 +1434,14 @@
     <None Include="Assets\Square City Architect\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />
     <None Include="Assets\Square City Architect\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\TiltShiftHdrLensBlur.shader" />
     <None Include="Assets\Square City Architect\Standard Assets\Effects\ImageEffects\Shaders\frag_ao.cginc" />
+    <None Include="Assets\Square City Architect\Standard Assets\Effects\TessellationShaders\Shaders\BumpedSpecularDisplacement.shader" />
+    <None Include="Assets\Square City Architect\Standard Assets\Effects\TessellationShaders\Shaders\BumpedSpecularSmooth.shader" />
     <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
     <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
     <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Light.shader" />
     <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Multiply.shader" />
+    <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\ProjectorLight.shader" />
+    <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\ProjectorMultiply.shader" />
     <None Include="Assets\Standard Assets\Skyboxes\skybox info.txt" />
     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
